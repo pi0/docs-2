@@ -10,17 +10,17 @@ Before you can create Dinero objects, you need to install and setup the library.
 
 You can install the library from [npm][npm:dinero], [download the files directly][jsdelivr:landing] or use the [jsDelivr CDN][jsdelivr:cdn].
 
-<div>
+<div class="overflow-x-auto">
   <table>
     <tbody>
       <tr>
         <td>
           UMD
         </td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/umd/dinero.js" target="_blank">Debug</a></td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/umd/dinero.min.js" target="_blank">Minified</a></td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/umd/dinero.polyfilled.js" target="_blank">Polyfilled</a></td>
-        <td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/umd/dinero.js" target="_blank">Debug <code><span class="text-smaller">52K</span></code></a></td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/umd/dinero.min.js" target="_blank">Minified <code><span class="text-smaller">8.2K</span></code></a></td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/umd/dinero.polyfilled.min.js" target="_blank">Polyfilled <code><span class="text-smaller">25K</span></code></a></td>
+        <td class="whitespace-no-wrap">
           <code>&lt;script src="path/to/umd/dinero.js"&gt;&lt;/script&gt;</code>
         </td>
       </tr>
@@ -28,10 +28,10 @@ You can install the library from [npm][npm:dinero], [download the files directly
         <td>
           CommonJS
         </td>
-        <td colspan="3">
+        <td colspan="3" class="whitespace-no-wrap">
           <code>npm install dinero.js --save</code>
         </td>
-        <td>
+        <td class="whitespace-no-wrap">
           <code>const Dinero = require('dinero.js')</code>
         </td>
       </tr>
@@ -39,10 +39,10 @@ You can install the library from [npm][npm:dinero], [download the files directly
         <td>
           ES module
         </td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/esm/dinero.js" target="_blank">Debug</a></td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/esm/dinero.min.js" target="_blank">Minified</a></td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/esm/dinero.polyfilled.js" target="_blank">Polyfilled</a></td>
-        <td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/esm/dinero.js" target="_blank">Debug <code><span class="text-smaller">49K</span></code></a></td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/esm/dinero.min.js" target="_blank">Minified <code><span class="text-smaller">8.9K</span></code></a></td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/esm/dinero.polyfilled.min.js" target="_blank">Polyfilled <code><span class="text-smaller">32K</span></code></a></td>
+        <td class="whitespace-no-wrap">
           <code>import Dinero from 'path/to/esm/dinero.js'</code>
         </td>
       </tr>
@@ -50,10 +50,10 @@ You can install the library from [npm][npm:dinero], [download the files directly
         <td>
           AMD
         </td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/amd/dinero.js" target="_blank">Debug</a></td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/amd/dinero.min.js" target="_blank">Minified</a></td>
-        <td><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/amd/dinero.polyfilled.js" target="_blank">Polyfilled</a></td>
-        <td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/amd/dinero.js" target="_blank">Debug <code><span class="text-smaller">52K</span></code></a></td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/amd/dinero.min.js" target="_blank">Minified <code><span class="text-smaller">8.1K</span></code></a></td>
+        <td class="whitespace-no-wrap"><a href="https://cdn.jsdelivr.net/npm/dinero.js@latest/build/amd/dinero.polyfilled.min.js" target="_blank">Polyfilled <code><span class="text-smaller">25K</span></code></a></td>
+        <td class="whitespace-no-wrap">
           <code>requirejs(['path/to/amd/dinero'])</code>
         </td>
       </tr>
@@ -177,8 +177,6 @@ Dinero({ amount: 1000 })
 ## Going further
 
 What we saw is only a preview of what you can do. Dinero.js has extensive documentation with examples for all of its methods.
-
-[Browse full API Reference][dinero:api]
 
 [npm:dinero]: https://www.npmjs.com/dinero.js
 [dinero:install]: /api-reference/install.html
