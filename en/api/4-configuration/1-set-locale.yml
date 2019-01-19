@@ -1,0 +1,16 @@
+title: Set locale
+signature: setLocale(newLocale)
+description: |
+  Returns a new Dinero object with an embedded locale.
+examples:
+- title: Set locale
+  code: |
+    // returns a Dinero object with locale 'ja-JP'
+    Dinero()
+      .setLocale('ja-JP')
+parameters:
+- name: newLocale
+  type: string
+  required: true
+  description: The new locale as an {@link http://tools.ietf.org/html/rfc5646 BCP 47 language tag}.
+response_type: Dinero
