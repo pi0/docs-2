@@ -1,0 +1,11 @@
+title: Get amount
+signature: getAmount()
+description: |
+  Returns the amount.
+examples:
+- title: Get amount
+  code: |
+    // returns 500
+    Dinero({ amount: 500 })
+      .getAmount()
+response_type: Number

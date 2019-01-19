@@ -1,0 +1,12 @@
+title: Get locale
+signature: getLocale()
+description: |
+  Returns the locale.
+examples:
+- title: Get locale
+  code: |
+    // returns 'fr-FR'
+    Dinero()
+      .setLocale('fr-FR')
+      .getLocale()
+response_type: String

@@ -1,0 +1,11 @@
+title: Get precision
+signature: getPrecision()
+description: |
+  Returns the precision.
+examples:
+- title: Get precision
+  code: |
+    // returns 3
+    Dinero({ precision: 3 })
+      .getPrecision()
+response_type: Number

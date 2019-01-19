@@ -1,0 +1,11 @@
+title: Get currency
+signature: getCurrency()
+description: |
+  Returns the currency.
+examples:
+- title: Get currency
+  code: |
+    // returns 'EUR'
+    Dinero({ currency: 'EUR' })
+      .getCurrency()
+response_type: String
