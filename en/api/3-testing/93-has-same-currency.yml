@@ -1,0 +1,21 @@
+title: Has same currency
+signature: hasSameCurrency(comparator)
+description: |
+  Checks whether the currency represented by this object equals to the other.
+examples:
+- title: Compare an object to a another with the same currency
+  code: |
+    // returns true
+    Dinero({ amount: 2000, currency: 'EUR' })
+      .hasSameCurrency(Dinero({ amount: 1000, currency: 'EUR' }))
+- title: Compare an object to a another with a different currency
+  code: |
+    // returns false
+    Dinero({ amount: 1000, currency: 'EUR' })
+      .hasSameCurrency(Dinero({ amount: 1000, currency: 'USD' }))
+parameters:
+- name: comparator
+  type: Dinero
+  required: true
+  description: The Dinero object to compare to.
+response_type: boolean

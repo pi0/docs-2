@@ -1,0 +1,31 @@
+title: Has same amount
+signature: hasSameAmount(comparator)
+description: |
+  Checks whether the amount represented by this object equals to the other.
+examples:
+- title: Compare an object to a another with the same amount
+  code: |
+    // returns true
+    Dinero({ amount: 1000, currency: 'EUR' })
+      .hasSameAmount(Dinero({ amount: 1000 }))
+- title: Compare an object to a another with a different amount
+  code: |
+    // returns false
+    Dinero({ amount: 2000, currency: 'EUR' })
+      .hasSameAmount(Dinero({ amount: 1000, currency: 'EUR' }))
+- title: Compare an object to a another with a different amount but a different precision that normalize to the same amount
+  code: |
+    // returns true
+    Dinero({ amount: 1000, currency: 'EUR', precision: 2 })
+      .hasSameAmount(Dinero({ amount: 10000, precision: 3 }))
+- title: Compare an object to a another with the same amount but a different precision that normalize to a different amount
+  code: |
+    // returns false
+    Dinero({ amount: 10000, currency: 'EUR', precision: 2 })
+      .hasSameAmount(Dinero({ amount: 10000, precision: 3 }))
+parameters:
+- name: comparator
+  type: Dinero
+  required: true
+  description: The Dinero object to compare to.
+response_type: boolean

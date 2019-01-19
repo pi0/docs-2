@@ -1,0 +1,18 @@
+title: Has sub-units
+signature: hasSubUnits()
+description: |
+  Checks if this has minor currency units.
+
+  Deprecates {@link module:Dinero~hasCents hasCents}.
+examples:
+- title: Test an object with no sub-units
+  code: |
+    // returns false
+    Dinero({ amount: 1100 })
+      .hasSubUnits()
+- title: Test an object with sub-units
+  code: |
+    // returns true
+    Dinero({ amount: 1150 })
+      .hasSubUnits()
+response_type: boolean

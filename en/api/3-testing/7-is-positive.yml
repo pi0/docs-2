@@ -1,0 +1,21 @@
+title: Is positive
+signature: isPositive()
+description: |
+  Checks if the value represented by this object is positive.
+examples:
+- title: Tests an object with a negative amount
+  code: |
+    // returns false
+    Dinero({ amount: -10 })
+      .isPositive()
+- title: Tests an object with a positive amount
+  code: |
+    // returns true
+    Dinero({ amount: 10 })
+      .isPositive()
+- title: Tests an object with an amount equal to zero
+  code: |
+    // returns true
+    Dinero({ amount: 0 })
+      .isPositive()
+response_type: boolean

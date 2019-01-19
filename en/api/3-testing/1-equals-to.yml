@@ -1,0 +1,41 @@
+title: Equals to
+signature: equalsTo(comparator)
+description: |
+  Checks whether the value represented by this object equals to the other.
+examples:
+- title: Compare two objects with same amounts and currencies
+  code: |
+    // returns true
+    Dinero({ amount: 500, currency: 'EUR' })
+      .equalsTo(Dinero({ amount: 500, currency: 'EUR' }))
+- title: Compare two objects with different amounts
+  code: |
+    // returns false
+    Dinero({ amount: 500, currency: 'EUR' })
+      .equalsTo(Dinero({ amount: 800, currency: 'EUR' }))
+- title: Compare two objects with different currencies
+  code: |
+    // returns false
+    Dinero({ amount: 500, currency: 'USD' })
+      .equalsTo(Dinero({ amount: 500, currency: 'EUR' }))
+- title: Compare two objects with different amounts and currencies
+  code: |
+    // returns false
+    Dinero({ amount: 500, currency: 'USD' })
+      .equalsTo(Dinero({ amount: 800, currency: 'EUR' }))
+- title: Compare two objects with different precisions but normalize to the same amount
+  code: |
+    // returns true
+    Dinero({ amount: 1000, currency: 'EUR', precision: 2 })
+      .equalsTo(Dinero({ amount: 10000, currency: 'EUR', precision: 3 }))
+- title: Compare two objects with same amount but different precisions that normalize to a different amount
+  code: |
+    // returns false
+    Dinero({ amount: 10000, currency: 'EUR', precision: 2 })
+      .equalsTo(Dinero({ amount: 10000, currency: 'EUR', precision: 3 }))
+parameters:
+- name: comparator
+  type: Dinero
+  required: true
+  description: The Dinero object to compare to.
+response_type: boolean

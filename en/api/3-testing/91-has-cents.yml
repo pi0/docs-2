@@ -1,0 +1,20 @@
+title: Has cents
+signature: hasCents()
+description: |
+  Checks if this has minor currency units.
+examples:
+- title: Test an object with no cents
+  code: |
+    // returns false
+    Dinero({ amount: 1100 })
+      .hasCents()
+- title: Test an object with cents
+  code: |
+    // returns true
+    Dinero({ amount: 1150 })
+      .hasCents()
+deprecated:
+- version: 1.4.0
+- end: 2.0.0
+- alternative: hasSubUnits
+response_type: boolean

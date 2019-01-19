@@ -1,0 +1,34 @@
+title: Greather than
+signature: greaterThan(comparator)
+description: |
+  Checks whether the value represented by this object is greater than the other.
+examples:
+- title: Compare an object to a another with a greater amount
+  code: |
+    // returns false
+    Dinero({ amount: 500 })
+      .greaterThan(Dinero({ amount: 800 }))
+- title: Compare an object to a another with a lesser amount
+  code: |
+    // returns true
+    Dinero({ amount: 800 })
+      .greaterThan(Dinero({ amount: 500 }))
+- title: Compare an object to a another with a greater amount but a different precision that normalize to a lesser amount
+  code: |
+    // returns true
+    Dinero({ amount: 800 })
+      .greaterThan(Dinero({ amount: 5000, precision: 3 }))
+- title: Compare an object to a another with a lesser amount but a different precision that normalize to a greather amount
+  code: |
+    // returns false
+    Dinero({ amount: 5000, precision: 3 })
+      .greaterThan(Dinero({ amount: 800 }))
+parameters:
+- name: comparator
+  type: Dinero
+  required: true
+  description: The Dinero object to compare to.
+throws:
+- type: TypeError
+  description: If `comparator` has a different currency.
+response_type: boolean

@@ -1,0 +1,16 @@
+title: Is zero
+signature: isZero()
+description: |
+  Checks if the value represented by this object is zero.
+examples:
+- title: Test an object with an amount equal to zero
+  code: |
+    // returns true
+    Dinero({ amount: 0 })
+      .isZero()
+- title: Test an object with an amount different from zero
+  code: |
+    // returns false
+    Dinero({ amount: 100 })
+      .isZero()
+response_type: boolean

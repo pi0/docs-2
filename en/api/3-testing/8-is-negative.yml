@@ -1,0 +1,21 @@
+title: Is negative
+signature: isNegative()
+description: |
+  Checks if the value represented by this object is negative.
+examples:
+- title: Test an object with a negative amount
+  code: |
+    // returns true
+    Dinero({ amount: -10 })
+      .isNegative()
+- title: Test an object with a positive amount
+  code: |
+    // returns false
+    Dinero({ amount: 10 })
+      .isNegative()
+- title: Test an object with an amount equal to zero
+  code: |
+    // returns false
+    Dinero({ amount: 0 })
+      .isNegative()
+response_type: boolean
