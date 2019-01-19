@@ -1,0 +1,21 @@
+title: Percentage
+signature: percentage(percentage)
+description: |
+  Returns a new Dinero object that represents a percentage of this.
+
+  As rounding is applied, precision may be lost in the process. If you want to accurately split a Dinero object, use {@link module:Dinero~allocate allocate} instead.
+examples:
+- title: Percentage
+  code: |
+    // returns a Dinero object with amount 5000
+    Dinero({ amount: 10000 })
+      .percentage(50)
+parameters:
+- name: percentage
+  type: number
+  required: true
+  description: The percentage to extract (between 0 and 100).
+throws:
+- type: RangeError
+  description: If `percentage` is out of range.
+response_type: Dinero

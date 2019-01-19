@@ -1,0 +1,42 @@
+title: Multiply
+signature: multiply(multiplier, roundingMode)
+description: |
+  Returns a new Dinero object that represents the multiplied value by the given factor.
+
+  By default, fractional minor currency units are rounded using the **half to even** rule ([banker's rounding](http://wiki.c2.com/?BankersRounding)).
+
+  Rounding *can* lead to accuracy issues as you chain many times. Consider a minimal amount of subsequent calculations for safer results.
+  You can also specify a different `roundingMode` to better fit your needs.
+examples:
+- title: Multiply
+  code: |
+    // returns a Dinero object with amount 1600
+    Dinero({ amount: 400 })
+      .multiply(4)      
+- title: Multiply and round with default rounding mode
+  code: |
+    // returns a Dinero object with amount 800
+    Dinero({ amount: 400 })
+      .multiply(2.001)  
+- title: Multiply and round with specified rounding mode
+  code: |
+    // returns a Dinero object with amount 801
+    Dinero({ amount: 400 })
+      .multiply(2.00125, 'HALF_UP')
+parameters:
+- name: multiplier
+  type: number
+  required: true
+  description: The factor to multiply by.
+- name: roundingMode
+  type: string
+  default: HALF_EVEN
+  description: The rounding mode to use.
+  possible_values:
+  - HALF_ODD
+  - HALF_EVEN
+  - HALF_UP
+  - HALF_DOWN
+  - HALF_TOWARDS_ZERO
+  - HALF_AWAY_FROM_ZERO
+response_type: Dinero
