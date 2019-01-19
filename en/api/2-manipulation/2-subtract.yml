@@ -20,4 +20,7 @@ parameters:
   type: Dinero
   required: true
   description: The Dinero object to subtract.
+throws:
+- type: TypeError
+  description: If `subtrahend` has a different currency.
 response_type: Dinero
