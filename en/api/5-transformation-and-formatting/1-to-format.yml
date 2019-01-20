@@ -3,7 +3,7 @@ signature: toFormat(format, roundingMode)
 description: |
   Returns this object formatted as a string.
 
-  The format is a mask which defines how the output string will be formatted.
+  The format is a mask which defines how the output string is formatted.
   It defines whether to display a currency, in what format, how many fraction digits to display and whether to use grouping separators.
   The output is formatted according to the applying locale.
 
@@ -20,7 +20,7 @@ description: |
   The format is a mask which defines a pattern and returns a valid, localized currency string.
   If you want to display the object in a custom way, either use {@link module:Dinero~getAmount getAmount}, {@link module:Dinero~toUnit toUnit} or {@link module:Dinero~toRoundedUnit toRoundedUnit} and manipulate the output string as you wish.
 
-  {@link module:Dinero~toFormat toFormat} wraps around `Number.prototype.toLocaleString`. For that reason, **format will vary depending on how it's implemented in the end user's environment**.
+  {@link module:Dinero~toFormat toFormat} wraps around `Number.prototype.toLocaleString`. For that reason, **format varies depending on how it's implemented in the end user's environment**.
 
   You can also use `toLocaleString` directly:
   

@@ -9,7 +9,7 @@ description: |
   If you round it, you'll bill a penny extra.
   With {@link module:Dinero~allocate allocate}, you can split a monetary amount then distribute the remainder as evenly as possible.
 
-  You can use percentage style or ratio style for `ratios`: `[25, 75]` and `[1, 3]` will do the same thing.
+  You can use percentage style or ratio style for `ratios`: `[25, 75]` and `[1, 3]` do the same thing.
 examples:
 - title: Allocate with percentage style
   code: |

@@ -87,7 +87,7 @@ Dinero({ amount: 500 })
 
 When you’re handling lots of monetary values, chances are you want some of them to share some attributes. If you’re making a website in German, you’ll likely want to show amounts with the German currency format.
 
-This is where global settings come in handy. Instead of passing them to every instance, you can declare options that will apply to all new objects.
+This is where global settings come in handy. Instead of passing them to every instance, you can declare options that apply to all new objects.
 
 ```js
 Dinero.globalLocale = 'de-DE'
