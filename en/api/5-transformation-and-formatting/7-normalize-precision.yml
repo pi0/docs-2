@@ -1,0 +1,21 @@
+title: Normalize precision
+signature: normalizePrecision(objects)
+static: true
+description: |
+  Returns an array of Dinero objects, normalized to the same precision (the highest).
+examples:
+- title: Normalize precision
+  code: |
+    // returns an array of Dinero objects
+    // both with a precision of 3
+    // and an amount of 1000
+    Dinero.normalizePrecision([
+      Dinero({ amount: 100, precision: 2 }),
+      Dinero({ amount: 1000, precision: 3 })
+    ])
+parameters:
+- name: objects
+  type: Dinero[]
+  required: true
+  description: An array of Dinero objects
+response_type: Dinero[]

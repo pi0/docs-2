@@ -1,0 +1,11 @@
+title: To object
+signature: toObject()
+description: |
+  Returns the object's data as an object literal.
+examples:
+- title: To object
+  code: |
+    // returns { amount: 500, currency: 'EUR', precision: 2 }
+    Dinero({ amount: 500, currency: 'EUR', precision: 2 })
+      .toObject()
+response_type: object

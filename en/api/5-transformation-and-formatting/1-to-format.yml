@@ -1,0 +1,78 @@
+title: To format
+signature: toFormat(format, roundingMode)
+description: |
+  Returns this object formatted as a string.
+
+  The format is a mask which defines how the output string will be formatted.
+  It defines whether to display a currency, in what format, how many fraction digits to display and whether to use grouping separators.
+  The output is formatted according to the applying locale.
+
+  Object                       | Format            | String
+  :--------------------------- | :---------------- | :---
+  `Dinero({ amount: 500050 })` | `'$0,0.00'`       | $5,000.50
+  `Dinero({ amount: 500050 })` | `'$0,0'`          | $5,001
+  `Dinero({ amount: 500050 })` | `'$0'`            | $5001
+  `Dinero({ amount: 500050 })` | `'$0.0'`          | $5000.5
+  `Dinero({ amount: 500050 })` | `'USD0,0.0'`      | USD5,000.5
+  `Dinero({ amount: 500050 })` | `'0,0.0 dollar'`  | 5,000.5 dollars
+
+  Don't try to substitute the `$` sign or the `USD` code with your target currency, nor adapt the format string to the exact format you want.
+  The format is a mask which defines a pattern and returns a valid, localized currency string.
+  If you want to display the object in a custom way, either use {@link module:Dinero~getAmount getAmount}, {@link module:Dinero~toUnit toUnit} or {@link module:Dinero~toRoundedUnit toRoundedUnit} and manipulate the output string as you wish.
+
+  {@link module:Dinero~toFormat toFormat} wraps around `Number.prototype.toLocaleString`. For that reason, **format will vary depending on how it's implemented in the end user's environment**.
+
+  You can also use `toLocaleString` directly:
+  
+  ```js
+  Dinero()
+    .toRoundedUnit(digits, roundingMode)
+    .toLocaleString(locale, options)
+  ```
+
+  By default, amounts are rounded using the **half away from zero** rule ([commercial rounding](https://en.wikipedia.org/wiki/Rounding#Round_half_away_from_zero)).
+  You can also specify a different `roundingMode` to better fit your needs.
+examples:
+- title: Format with a mask specifying grouping and currency symbol
+  code: |
+    // returns $2,000
+    Dinero({ amount: 200000 })
+      .toFormat('$0,0')
+- title: Format with a mask specifying grouping, currency symbol and one fraction digit
+  code: |
+    // returns €50.5
+    Dinero({ amount: 5050, currency: 'EUR' })
+      .toFormat('$0,0.0')
+- title: Format with a mask specifying grouping and currency name
+  code: |
+    // returns 100 euros
+    Dinero({ amount: 10000, currency: 'EUR' })
+      .setLocale('fr-FR')
+      .toFormat('0,0 dollar')
+- title: Format with default mask
+  code: |
+    // returns 2000
+    Dinero({ amount: 200000, currency: 'EUR' })
+      .toFormat()
+- title: Format with a mask specifying currency symbol, and specified rounding mode
+  code: |
+    // returns $10
+    Dinero({ amount: 1050 })
+      .toFormat('$0', 'HALF_EVEN')
+parameters:
+- name: format
+  type: string
+  default: $0,0.00
+  description: The format mask to format to.
+- name: roundingMode
+  type: string
+  default: HALF_AWAY_FROM_ZERO
+  description: The rounding mode to use
+  possible_values:
+  - HALF_ODD
+  - HALF_EVEN
+  - HALF_UP
+  - HALF_DOWN
+  - HALF_TOWARDS_ZERO
+  - HALF_AWAY_FROM_ZERO
+response_type: string

@@ -1,0 +1,19 @@
+title: Convert precision
+signature: convertPrecision(newPrecision)
+description: |
+  Returns a new Dinero object with a new precision and a converted amount.
+examples:
+- title: Convert precision
+  code: |
+    // Returns a Dinero object with precision 3 and amount 1000
+    Dinero({ amount: 100, precision: 2 })
+      .convertPrecision(3)
+parameters:
+- name: newPrecision
+  type: number
+  required: true
+  description: The new precision.
+throws:
+- type: TypeError
+  description: If `newPrecision` is invalid.
+response_type: Dinero

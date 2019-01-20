@@ -1,0 +1,16 @@
+title: To unit
+signature: toUnit()
+description: |
+  Returns the amount represented by this object in units.
+examples:
+- title: To unit
+  code: |
+    // returns 10.5
+    Dinero({ amount: 1050 })
+      .toUnit()
+- title: To unit with a specified precision
+  code: |
+    // returns 10.545
+    Dinero({ amount: 10545, precision: 3 })
+      .toUnit()
+response_type: number

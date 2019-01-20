@@ -1,0 +1,19 @@
+title: To rounded unit
+signature: toRoundedUnit(digits, roundingMode)
+description: |
+  Returns the amount represented by this object in rounded units.
+
+  By default, the method uses the **half away from zero** rule ([commercial rounding](https://en.wikipedia.org/wiki/Rounding#Round_half_away_from_zero)).
+  You can also specify a different `roundingMode` to better fit your needs.
+examples:
+- title: Round with default rounding mode
+  code: |
+    // returns 10.6
+    Dinero({ amount: 1055 })
+      .toRoundedUnit(1)
+- title: Round with specified rounding mode
+  code: |
+    // returns 10
+    Dinero({ amount: 1050 })
+      .toRoundedUnit(0, 'HALF_EVEN')
+response_type: number
