@@ -1,3 +1,4 @@
+order: 4
 title: Divide
 signature: divide(divisor, roundingMode)
 description: |

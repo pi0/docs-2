@@ -1,3 +1,4 @@
+order: 2
 title: Less than
 signature: lessThan(comparator)
 description: |

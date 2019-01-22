@@ -1,3 +1,4 @@
+order: 12
 title: Has same currency
 signature: hasSameCurrency(comparator)
 description: |

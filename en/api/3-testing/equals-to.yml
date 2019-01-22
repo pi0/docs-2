@@ -1,3 +1,4 @@
+order: 1
 title: Equals to
 signature: equalsTo(comparator)
 description: |

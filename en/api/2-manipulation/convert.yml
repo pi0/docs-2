@@ -1,3 +1,4 @@
+order: 7
 title: Convert
 signature: convert(currency, options)
 description: |

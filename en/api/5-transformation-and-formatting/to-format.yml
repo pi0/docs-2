@@ -1,3 +1,4 @@
+order: 1
 title: To format
 signature: toFormat(format, roundingMode)
 description: |

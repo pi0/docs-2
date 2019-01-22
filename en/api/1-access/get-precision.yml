@@ -1,3 +1,4 @@
+order: 4
 title: Get precision
 signature: getPrecision()
 description: |
