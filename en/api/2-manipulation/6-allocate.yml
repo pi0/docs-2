@@ -1,4 +1,3 @@
-order: 6
 title: Allocate
 signature: allocate(ratios)
 description: |

@@ -1,4 +1,3 @@
-order: 2
 title: Get currency
 signature: getCurrency()
 description: |

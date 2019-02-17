@@ -1,4 +1,3 @@
-order: 6
 title: Convert precision
 signature: convertPrecision(newPrecision)
 description: |

@@ -1,4 +1,3 @@
-order: 4
 title: Greather than
 signature: greaterThan(comparator)
 description: |

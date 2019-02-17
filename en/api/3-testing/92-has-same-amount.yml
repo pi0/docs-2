@@ -1,4 +1,3 @@
-order: 11
 title: Has same amount
 signature: hasSameAmount(comparator)
 description: |

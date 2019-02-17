@@ -1,4 +1,3 @@
-order: 5
 title: Greather than or equal
 signature: greaterThanOrEqual(comparator)
 description: |

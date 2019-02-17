@@ -1,4 +1,3 @@
-order: 7
 title: Normalize precision
 signature: normalizePrecision(objects)
 static: true

@@ -1,4 +1,3 @@
-order: 1
 title: Set locale
 signature: setLocale(newLocale)
 description: |
