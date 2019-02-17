@@ -5,8 +5,8 @@ remark \
   --quiet \
   --frail \
   ./README.md \
-  ./docs/*.md
+  ./docs/**/*.md
 
 textlint \
   ./README.md \
-  ./docs/*.md \
+  ./docs/**/*.md \
