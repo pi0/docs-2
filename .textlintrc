@@ -1,27 +1,27 @@
 {
-   "rules": {
-      "@textlint-rule/no-unmatched-pair": true,
-      "@textlint-rule/no-invalid-control-character": true,
-      "alex": {
-        allow: ["remains", "execute", "executed", "german"],
-      },
-      "common-misspellings": true,
-      "en-capitalization": true,
-      "no-start-duplicated-conjunction": true,
-      "no-todo": true,
-      "stop-words": {
-        "exclude": [
-          "conversion",
-          "relative to"
-        ]
-      },
-      "terminology": true,
-      "unexpanded-acronym": {
-        "ignore_acronyms": ["API", "ISO", "MIT", "PHP"]
-      },
-      "write-good": {
-        "passive": true,
-        "severity": "warning"
-      }
-   }
+  "rules": {
+    "@textlint-rule/no-unmatched-pair": true,
+    "@textlint-rule/no-invalid-control-character": true,
+    "alex": {
+      allow: ["remains", "execute", "executed", "german"],
+    },
+    "common-misspellings": true,
+    "en-capitalization": true,
+    "no-start-duplicated-conjunction": true,
+    "no-todo": true,
+    "stop-words": {
+      "exclude": [
+        "conversion",
+        "relative to"
+      ]
+    },
+    "terminology": true,
+    "unexpanded-acronym": {
+      "ignore_acronyms": ["API", "ISO", "MIT", "PHP"]
+    },
+    "write-good": {
+      "passive": true,
+      "severity": "warning"
+    }
+  }
 }
