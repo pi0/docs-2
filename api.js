@@ -21,7 +21,7 @@ const getResources = async directory =>
     )
   )
 
-getResources('./en/api').then(resource => {
+getResources('./docs').then(resource => {
   resource
     .flat(Infinity)
     .map(resource => ({

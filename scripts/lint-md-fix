@@ -6,4 +6,4 @@ prettier \
   --loglevel error \
   --write \
   ./README.md \
-  ./en/*.md
+  ./docs/*.md
