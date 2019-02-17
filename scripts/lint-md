@@ -1,5 +1,12 @@
 #!/usr/bin/env sh
 
+remark \
+  --no-stdout \
+  --quiet \
+  --frail \
+  ./README.md \
+  ./en/*.md
+
 textlint \
   ./README.md \
   ./en/*.md \
