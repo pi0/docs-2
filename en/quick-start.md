@@ -1,14 +1,14 @@
 # Quick Start
 
-Dinero.js makes it easy to create, calculate and format monetary values in JavaScript. You can perform arithmetic operations, extensively parse and format them, check for many things to make your development process more manageable and safer.
+Dinero.js makes it easy to create, calculate and format monetary values in JavaScript. You can perform arithmetic operations on them, parse and format them, ask them questions and make your development process more manageable and safer.
 
-**Note:** The library is globally available in the docs for you to be able to test it right in the browser console.
+**Note:** The library is globally available in the docs so you can test it right in the browser console.
 
 ## Getting started
 
 Before you can create Dinero objects, you need to install and setup the library. Dinero.js provides builds for different environments. It also comes with polyfilled versions for older browsers.
 
-You can install the library from [npm][npm:dinero], [download the files directly][jsdelivr:landing] or use the [jsDelivr CDN][jsdelivr:cdn].
+You can install the library from [npm][npm:dinero], [download the files directly][jsdelivr:landing] or use the [jsDelivr content delivery network][jsdelivr:cdn].
 
 <div class="overflow-x-auto">
   <table>
@@ -98,7 +98,7 @@ Dinero({ amount: 500 })
   .multiply(4)
 ```
 
-**Note:** because method calls are executed sequentially, **mathematical operator precedence doesn't apply**. When you execute the code above, the addition happens before the multiplication, evaluating to `4000`, while `500 + 500 * 4` would normally evaluate to `2500`. If you need an operation to happen before another, you need to make sure you call it first.
+**Note:** because method calls are executed sequentially, **mathematical operator precedence doesn't apply**. When you execute the code above, the addition happens before the multiplication, evaluating to `4000`, while `500 + 500 * 4` evaluates to `2500`. If you need an operation to happen before another, you need to make sure you call it first.
 
 You can ask all kinds of questions to your Dinero instance. You get a `Boolean` in return:
 
@@ -115,7 +115,7 @@ Dinero({ amount: 1150 }).hasCents()
 
 ## Displaying a Dinero object
 
-Because Dinero.js uses `Number.toLocaleString` under the hood, you can display it into any format, for any language. However, no need to pass complex objects of options to format Dinero instances to your liking. Dinero.js works with intuitive `String` masks:
+Because Dinero.js uses `Number.toLocaleString` under the hood, you can display it into any format, for any language. Yet, you don't have to pass complex objects of options to format Dinero instances to your liking. Dinero.js works with intuitive `String` masks:
 
 ```js
 // returns $5.00
@@ -140,7 +140,7 @@ Dinero.globalLocale = 'de-DE'
 Dinero({ amount: 500000 }).toFormat('$0,0')
 ```
 
-You can still pass a locale to your Dinero instance if you need, to override the global one. When you use a transformative method on a Dinero object, its local locale is inherited.
+You can still pass a locale to your Dinero instance if you need, to override the global one. When you use a transformative method on a Dinero object, it preserves its locale.
 
 ```js
 // returns 10 $US
@@ -152,7 +152,7 @@ Dinero({ amount: 500 })
 
 ## Handling different precisions
 
-By default, new Dinero objects represent monetary values with two decimal places. If you want to represent more, or if you're using a currency with a different [exponent](https://en.wikipedia.org/wiki/ISO_4217#Treatment_of_minor_currency_units_(the_%22exponent%22)), you can specify a precision.
+By default, new Dinero objects represent monetary values with two decimal places. To represent more, or if you're using a currency with a different [exponent](https://en.wikipedia.org/wiki/ISO_4217#Treatment_of_minor_currency_units_(the_%22exponent%22)), you can specify a precision.
 
 ```js
 // represents $10.545
@@ -176,11 +176,10 @@ Dinero({ amount: 1000 })
 
 ## Going further
 
-What we saw is only a preview of what you can do. Dinero.js has extensive documentation with examples for all of its methods.
+What we saw is a preview of what you can do. Dinero.js has extensive documentation with examples for all its methods.
 
 [npm:dinero]: https://www.npmjs.com/dinero.js
 [dinero:install]: /api-reference/install.html
 [jsdelivr:landing]: https://www.jsdelivr.com/package/npm/dinero.js
 [jsdelivr:cdn]: https://cdn.jsdelivr.net/npm/dinero.js/build
 [wiki:iso-4217]: https://en.wikipedia.org/wiki/ISO_4217
-[dinero:api]: /api-reference/
