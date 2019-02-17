@@ -5,8 +5,11 @@
     "alex": {
       allow: ["remains", "execute", "executed", "german"],
     },
+    "apostrophe": true,
     "common-misspellings": true,
+    "diacritics": true,
     "en-capitalization": true,
+    "no-empty-section": true,
     "no-start-duplicated-conjunction": true,
     "no-todo": true,
     "stop-words": {
