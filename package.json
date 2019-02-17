@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon api.js",
-    "lint:md": "./scripts/lint-md"
+    "lint:md": "./scripts/lint-md",
+    "lint:md:fix": "./scripts/lint-md-fix"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
@@ -18,6 +19,7 @@
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.2.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.7",
     "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
     "remark-cli": "^6.0.1",
     "remark-frontmatter": "^1.3.1",
     "remark-lint-no-trailing-spaces": "^2.0.0",

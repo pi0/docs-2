@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+
+prettier \
+  --loglevel error \
+  --write \
+  ./README.md \
+  ./en/*.md
