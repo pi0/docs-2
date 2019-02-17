@@ -13,9 +13,9 @@ Hunt][producthunt:dinerojs] if you use, like, or support the library 🌟🔼�
 
 ## Acknowledgements
 
-Dinero.js follows [Martin Fowler's monetary representation][fowler-money].
+Dinero.js follows [Martin Fowler’s monetary representation][fowler-money].
 Design-wise, it draws inspiration from [Money PHP][moneyphp], [Luxon][luxon],
-[Moment.js][moment] and [Numeral.js][numeral] (even though it doesn't rely on
+[Moment.js][moment] and [Numeral.js][numeral] (even though it doesn’t rely on
 any of them).
 
 ## License

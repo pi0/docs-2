@@ -65,12 +65,12 @@ as you charge the second half, you end up with the same result and charge a
 penny extra.
 
 Instead of relying on basic math to handle money, you need specific techniques
-that take the nature of the entity you're manipulating into account.
+that take the nature of the entity you’re manipulating into account.
 
 ## How does Dinero.js work?
 
 Dinero.js follows [Martin Fowler’s money pattern and
-more][martinfowler:eaa:money]. It's immutable and chainable, supports global
+more][martinfowler:eaa:money]. It’s immutable and chainable, supports global
 settings, has extended formatting options and provides native
 internationalization support.
 
@@ -82,7 +82,7 @@ altogether.
 
 **With Dinero.js, you can perform calculations without worrying about altering
 original instances.** In the following Vue.js example, calling `priceWithTax`
-won't alter `price`. If the instance was mutable, it would.
+won’t alter `price`. If the instance was mutable, it would.
 
 ```js
 const vm = new Vue({
@@ -145,7 +145,7 @@ international e-commerce sites.
 
 ## Why should I use Dinero.js?
 
-Dinero.js is a **modern, reliable, fully tested library that works**. It's
+Dinero.js is a **modern, reliable, fully tested library that works**. It’s
 lightweight and you can use it in any JavaScript environment.
 
 [wiki:ieee754]: https://en.wikipedia.org/wiki/IEEE_754

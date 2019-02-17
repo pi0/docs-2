@@ -112,7 +112,7 @@ Dinero({ amount: 500 })
 ```
 
 **Note:** because method calls are executed sequentially, **mathematical
-operator precedence doesn't apply**. When you execute the code above, the
+operator precedence doesn’t apply**. When you execute the code above, the
 addition happens before the multiplication, evaluating to `4000`, while
 `500 + 500 * 4` evaluates to `2500`. If you need an operation to happen before
 another, you need to make sure you call it first.
@@ -134,7 +134,7 @@ Dinero({ amount: 1150 }).hasCents()
 ## Displaying a Dinero object
 
 Because Dinero.js uses `Number.toLocaleString` under the hood, you can display
-it into any format, for any language. Yet, you don't have to pass complex
+it into any format, for any language. Yet, you don’t have to pass complex
 objects of options to format Dinero instances to your liking. Dinero.js works
 with intuitive `String` masks:
 
@@ -153,7 +153,7 @@ Dinero({ amount: 500000 })
   .toFormat('$0,0')
 ```
 
-If you don't want to set the locale all the time, you can also define it
+If you don’t want to set the locale all the time, you can also define it
 globally:
 
 ```js
@@ -178,7 +178,7 @@ Dinero({ amount: 500 })
 ## Handling different precisions
 
 By default, new Dinero objects represent monetary values with two decimal
-places. To represent more, or if you're using a currency with a different
+places. To represent more, or if you’re using a currency with a different
 [exponent](<https://en.wikipedia.org/wiki/ISO_4217#Treatment_of_minor_currency_units_(the_%22exponent%22)>),
 you can specify a precision.
 
@@ -191,7 +191,7 @@ Dinero({ amount: 10545, precision: 3 })
 Dinero({ amount: 1, currency: 'JPY', precision: 0 })
 ```
 
-If you're using the same currency more than once, it might be worth setting a
+If you’re using the same currency more than once, it might be worth setting a
 default precision.
 
 ```js
