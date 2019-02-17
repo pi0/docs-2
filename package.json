@@ -3,5 +3,17 @@
   "version": "1.0.0",
   "description": "Dinero.js documentation files",
   "author": "Sarah Dayan",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon api.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "express": "^4.16.4",
+    "marked": "^0.6.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
 }
