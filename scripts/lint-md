@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+textlint \
+  ./README.md \
+  ./en/*.md \
