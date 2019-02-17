@@ -26,8 +26,8 @@ Dinero({ amount: 500 })
 
 ## Why does Dinero.js exists?
 
-There is much more to money than meets the eye. It’s way more than the `Number`
-data type can take.
+Money is more complex than you might think. It’s way more than the `Number` data
+type can take.
 
 ### Money is more than a number
 
@@ -60,8 +60,8 @@ Sometimes you need to split money, but **regular math operations like
 percentages or division can’t cut it without adding or losing pennies**.
 
 Imagine you need to bill $999.99 with a 50% downpayment. Half is $499.995, but
-you can’t split a penny so you’ll likely round the result to \$500. Problem is,
-as you charge the second half, you end up with the same result and charge a
+you can’t split a penny so you’ll probably round the result to \$500. Problem
+is, as you charge the second half, you end up with the same result and charge a
 penny extra.
 
 Instead of relying on basic math to handle money, you need specific techniques

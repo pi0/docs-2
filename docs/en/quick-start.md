@@ -111,11 +111,11 @@ Dinero({ amount: 500 })
   .multiply(4)
 ```
 
-**Note:** because method calls are executed sequentially, **mathematical
-operator precedence doesn’t apply**. When you execute the code above, the
-addition happens before the multiplication, evaluating to `4000`, while
-`500 + 500 * 4` evaluates to `2500`. If you need an operation to happen before
-another, you need to make sure you call it first.
+**Note:** because method calls execute sequentially, **mathematical operator
+precedence doesn’t apply**. When you execute the code above, the addition
+happens before the multiplication, evaluating to `4000`, while `500 + 500 * 4`
+evaluates to `2500`. If you need an operation to happen before another, you need
+to make sure you call it first.
 
 You can ask all kinds of questions to your Dinero instance. You get a `Boolean`
 in return:

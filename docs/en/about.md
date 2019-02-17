@@ -20,7 +20,7 @@ any of them).
 
 ## License
 
-Dinero.js is licensed under [MIT][license].
+Dinero.js is under [MIT license][license].
 
 [github:dinero]: https://github.com/sarahdayan/dinero.js
 [dinero-guidelines]:
