@@ -34,10 +34,9 @@ getResources('./docs').then(resource => {
     .forEach(route => {
       app.get(route.route, async (req, res) => {
         res.setHeader('Content-Type', 'application/json')
-        const data = await fs.readFileAsync(route.resource, 'utf8')
         return res.send({
           data: utils.parseData(
-            data,
+            await fs.readFileAsync(route.resource, 'utf8'),
             path.extname(route.resource).replace('.', '')
           )
         })
