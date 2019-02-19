@@ -27,7 +27,7 @@ npm install
 
 ### Start server
 
-Start the dev server on port `3000` by running:
+Start the dev server on port `4000` by running:
 
 ```sh
 yarn start
@@ -35,8 +35,8 @@ yarn start
 npm run start
 ```
 
-Then, access the API on [http://localhost:3000][localhost:3000] 🚀
+Then, access the API on [http://localhost:4000][localhost:4000] 🚀
 
 [node]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
-[localhost:3000]: http://localhost:3000
+[localhost:4000]: http://localhost:4000
