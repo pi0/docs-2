@@ -40,5 +40,12 @@
     "textlint-rule-terminology": "^1.1.30",
     "textlint-rule-unexpanded-acronym": "^1.2.3",
     "textlint-rule-write-good": "^1.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/dinerojs/docs/issues"
+  },
+  "homepage": "https://github.com/dinerojs/docs#readme",
+  "engines": {
+    "node": ">=11.0.0"
   }
 }
