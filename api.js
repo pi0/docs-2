@@ -12,16 +12,18 @@ const port = process.env.PORT || 4000
 
 app.listen(port)
 
-const getResources = async directory =>
+const getResources = async (directory, { ignoreFiles = [] }) =>
   await Promise.all(
-    (await fs.readdirAsync(directory)).map(child =>
-      fs.lstatSync(directory + '/' + child).isDirectory()
-        ? getResources(directory + '/' + child)
-        : directory + '/' + child
-    )
+    (await fs.readdirAsync(directory))
+      .filter(child => ignoreFiles.indexOf(child) === -1)
+      .map(child =>
+        fs.lstatSync(directory + '/' + child).isDirectory()
+          ? getResources(directory + '/' + child, { ignoreFiles })
+          : directory + '/' + child
+      )
   )
 
-getResources('./docs').then(resource => {
+getResources('./docs', { ignoreFiles: ['.DS_Store'] }).then(resource => {
   resource
     .flat(Infinity)
     .map(resource => ({
