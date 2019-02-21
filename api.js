@@ -34,25 +34,29 @@ getResources('./docs', {
   app.get('/docs', async (req, res) => {
     res.setHeader('Content-Type', 'application/json')
     return res.send(
-      Object.assign(
-        {},
-        ...resources.map(resource => ({
-          [resource.route.substring(1).replace(/([\/-])/gm, '_')]: `${
-            req.protocol
-            }://${req.headers.host}${resource.route}`
-        }))
+      utils.toPayload(
+        Object.assign(
+          {},
+          ...resources.map(resource => ({
+            [resource.route.substring(1).replace(/([\/-])/gm, '_')]: `${
+              req.protocol
+              }://${req.headers.host}${resource.route}`
+          }))
+        )
       )
     )
   })
   resources.forEach(route => {
     app.get(route.route, async (req, res) => {
       res.setHeader('Content-Type', 'application/json')
-      return res.send({
-        data: utils.parseData(
-          await fs.readFileAsync(route.resource, 'utf8'),
-          path.extname(route.resource).replace('.', '')
-        )
-      })
+      return res.send(
+        utils.toPayload({
+          data: utils.parseData(
+            await fs.readFileAsync(route.resource, 'utf8'),
+            path.extname(route.resource).replace('.', '')
+          )
+        })
+      )
     })
   })
 })

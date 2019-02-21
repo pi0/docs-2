@@ -12,5 +12,6 @@ module.exports = {
       get yml() {
         return yaml.parse(data)
       }
-    }[type] || data)
+    }[type] || data),
+  toPayload: resource => `${JSON.stringify(resource, null, 2)}\n`
 }
