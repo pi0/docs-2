@@ -24,24 +24,35 @@ const getResources = async (directory, { ignoreFiles = [] }) =>
 getResources('./docs', {
   ignoreFiles: ['.DS_Store']
 }).then(resource => {
-  resource
-    .flat(Infinity)
-    .map(resource => ({
-      resource,
-      route: resource
-        .split('/')
-        .map(x => utils.resourceWithoutOrder(utils.filenameWithoutExtension(x)))
-        .join('/')
-    }))
-    .forEach(route => {
-      app.get(route.route, async (req, res) => {
-        res.setHeader('Content-Type', 'application/json')
-        return res.send({
-          data: utils.parseData(
-            await fs.readFileAsync(route.resource, 'utf8'),
-            path.extname(route.resource).replace('.', '')
-          )
-        })
+  const resources = resource.flat(Infinity).map(resource => ({
+    resource,
+    route: resource
+      .split('/')
+      .map(x => utils.resourceWithoutOrder(utils.filenameWithoutExtension(x)))
+      .join('/')
+  }))
+  app.get('/docs', async (req, res) => {
+    res.setHeader('Content-Type', 'application/json')
+    return res.send(
+      Object.assign(
+        {},
+        ...resources.map(resource => ({
+          [resource.route.substring(1).replace(/([\/-])/gm, '_')]: `${
+            req.protocol
+            }://${req.headers.host}${resource.route}`
+        }))
+      )
+    )
+  })
+  resources.forEach(route => {
+    app.get(route.route, async (req, res) => {
+      res.setHeader('Content-Type', 'application/json')
+      return res.send({
+        data: utils.parseData(
+          await fs.readFileAsync(route.resource, 'utf8'),
+          path.extname(route.resource).replace('.', '')
+        )
       })
     })
+  })
 })
