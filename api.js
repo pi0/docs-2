@@ -1,6 +1,4 @@
 const bluebird = require('bluebird')
-const marked = require('marked')
-const yaml = require('yamljs')
 const path = require('path')
 const express = require('express')
 
@@ -23,7 +21,9 @@ const getResources = async (directory, { ignoreFiles = [] }) =>
       )
   )
 
-getResources('./docs', { ignoreFiles: ['.DS_Store'] }).then(resource => {
+getResources('./docs', {
+  ignoreFiles: ['.DS_Store']
+}).then(resource => {
   resource
     .flat(Infinity)
     .map(resource => ({
