@@ -1,4 +1,3 @@
-const marked = require('marked')
 const yaml = require('yamljs')
 
 module.exports = {
@@ -12,9 +11,6 @@ module.exports = {
     ({
       get yml() {
         return yaml.parse(data)
-      },
-      get md() {
-        return marked(data)
       }
     }[type] || data)
 }
