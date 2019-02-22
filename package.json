@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon api.js",
+    "lint:js": "prettier --write '*.js'",
     "lint:md": "./scripts/lint-md",
     "lint:md:fix": "./scripts/lint-md-fix"
   },

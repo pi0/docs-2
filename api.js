@@ -9,13 +9,12 @@ const app = express()
 const port = process.env.PORT || 4000
 
 app.listen(port)
-
-  ; (async () => {
-    const rawResources = await utils.getResources('./docs', {
-      ignoreFiles: ['.DS_Store']
-    })
-
-    const resources = rawResources.flat(Infinity).map(resource => ({
+;(async () => {
+  const resources = (await utils.getResources('./docs', {
+    ignoreFiles: ['.DS_Store']
+  }))
+    .flat(Infinity)
+    .map(resource => ({
       resource,
       route: resource
         .split('/')
@@ -23,33 +22,33 @@ app.listen(port)
         .join('/')
     }))
 
-    app.get('/docs', async ({ protocol, headers }, res) => {
-      res.setHeader('Content-Type', 'application/json')
-      return res.send(
-        utils.toPayload(
-          Object.assign(
-            {},
-            ...resources.map(({ route }) => ({
-              [route.substring(1).replace(/([\/-])/gm, '_')]: `${protocol}://${
-                headers.host
-                }${route}`
-            }))
-          )
+  app.get('/docs', async ({ protocol, headers }, res) => {
+    res.setHeader('Content-Type', 'application/json')
+    return res.send(
+      utils.toPayload(
+        Object.assign(
+          {},
+          ...resources.map(({ route }) => ({
+            [route.substring(1).replace(/([\/-])/gm, '_')]: `${protocol}://${
+              headers.host
+            }${route}`
+          }))
         )
       )
-    })
+    )
+  })
 
-    resources.forEach(route => {
-      app.get(route.route, async (req, res) => {
-        res.setHeader('Content-Type', 'application/json')
-        return res.send(
-          utils.toPayload({
-            data: utils.parseData(
-              await fs.readFileAsync(route.resource, 'utf8'),
-              path.extname(route.resource).replace('.', '')
-            )
-          })
-        )
-      })
+  resources.forEach(route => {
+    app.get(route.route, async (req, res) => {
+      res.setHeader('Content-Type', 'application/json')
+      return res.send(
+        utils.toPayload({
+          data: utils.parseData(
+            await fs.readFileAsync(route.resource, 'utf8'),
+            path.extname(route.resource).replace('.', '')
+          )
+        })
+      )
     })
-  })()
+  })
+})()
