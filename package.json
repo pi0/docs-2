@@ -11,6 +11,7 @@
     "lint:md:fix": "./scripts/lint-md-fix"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bluebird": "^3.5.3",
     "express": "^4.16.4",
     "yamljs": "^0.3.0"

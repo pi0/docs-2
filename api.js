@@ -3,6 +3,7 @@ const path = require('path')
 const express = require('express')
 
 const utils = require('./utils')
+const { getReleases } = require('./releases')
 
 const fs = bluebird.promisifyAll(require('fs'))
 const app = express()
@@ -50,5 +51,15 @@ app.listen(port)
         })
       )
     })
+  })
+
+  app.get('/docs/releases', async (req, res) => {
+    try {
+      const releases = await getReleases()
+      res.json(releases)
+    } catch (error) {
+      res.statusCode = 500
+      res.end(JSON.stringify(error.response ? error.response.data : { error: error + '' }))
+    }
   })
 })()
