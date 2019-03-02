@@ -8,7 +8,7 @@ description: |
   Rounding *can* lead to accuracy issues as you chain many times. Consider a minimal amount of subsequent calculations for safer results.
   You can also specify a different `roundingMode` to better fit your needs.
 
-  As rounding is applied, precision may be lost in the process. If you want to accurately split a Dinero object, use {@link module:Dinero~allocate allocate} instead.
+  As rounding is applied, precision may be lost in the process. If you want to accurately split a Dinero object, use [allocate](/api/manipulation/allocate) instead.
 examples:
 - title: Divide
   code: |

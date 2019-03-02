@@ -3,7 +3,7 @@ signature: convert(currency, options)
 description: |
   Returns a Promise containing a new Dinero object converted to another currency.
 
-  You must provide your own API to retrieve exchange rates. This method won't work if you don't set either {@link Globals global API parameters}, or local ones for your instance.
+  You must provide your own API to retrieve exchange rates. This method won't work if you don't set either global API parameters, or local ones for your instance.
 
   Here are some exchange rate APIs you can use:
 
@@ -81,7 +81,7 @@ parameters:
 - name: currency
   type: string
   required: true
-  description: The destination currency, expressed as an {@link https://en.wikipedia.org/wiki/ISO_4217#Active_codes ISO 4217 currency code}.
+  description: The destination currency, expressed as an [ISO 4217 currency code](https://en.wikipedia.org/wiki/ISO_4217#Active_codes).
 - name: options.endpoint
   type: string
   required: true

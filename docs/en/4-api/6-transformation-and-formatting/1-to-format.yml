@@ -18,9 +18,9 @@ description: |
 
   Don't try to substitute the `$` sign or the `USD` code with your target currency, nor adapt the format string to the exact format you want.
   The format is a mask which defines a pattern and returns a valid, localized currency string.
-  If you want to display the object in a custom way, either use {@link module:Dinero~getAmount getAmount}, {@link module:Dinero~toUnit toUnit} or {@link module:Dinero~toRoundedUnit toRoundedUnit} and manipulate the output string as you wish.
+  If you want to display the object in a custom way, either use [getAmount](/api/access/get-amount), [toUnit](/api/transformation-and-formatting/to-unit) or [toRoundedUnit](/api/transformation-and-formatting/to-rounded-unit) and manipulate the output string as you wish.
 
-  {@link module:Dinero~toFormat toFormat} wraps around `Number.prototype.toLocaleString`. For that reason, **format varies depending on how it's implemented in the end user's environment**.
+  [toFormat](/api/transformation-and-formatting/to-format) wraps around `Number.prototype.toLocaleString`. For that reason, **format varies depending on how it's implemented in the end user's environment**.
 
   You can also use `toLocaleString` directly:
   

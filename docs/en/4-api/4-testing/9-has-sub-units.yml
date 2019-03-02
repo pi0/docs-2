@@ -3,7 +3,7 @@ signature: hasSubUnits()
 description: |
   Checks if this has minor currency units.
 
-  Deprecates {@link module:Dinero~hasCents hasCents}.
+  Deprecates [hasCents](/api/testing/has-cents).
 examples:
 - title: Test an object with no sub-units
   code: |

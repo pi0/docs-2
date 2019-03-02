@@ -12,5 +12,5 @@ parameters:
 - name: newLocale
   type: string
   required: true
-  description: The new locale as an {@link http://tools.ietf.org/html/rfc5646 BCP 47 language tag}.
+  description: The new locale as an [BCP 47 language tag](http://tools.ietf.org/html/rfc5646).
 response_type: Dinero

@@ -3,7 +3,7 @@ signature: toJSON()
 description: |
   Returns the object's data as an object literal.
 
-  Alias of {@link module:Dinero~toObject toObject}. It is defined so that calling `JSON.stringify` on a Dinero object automatically extracts the relevant data.
+  Alias of [toObject](/api/transformation-and-formatting/to-object). It is defined so that calling `JSON.stringify` on a Dinero object automatically extracts the relevant data.
 examples:
 - title: To JSON
   code: |
